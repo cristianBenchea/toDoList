@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 10px; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  background: -webkit-gradient(linear, left top, right top, from(#0072ff), to(#00c6ff));
+  background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+  background: -o-linear-gradient(left, #0072ff, #00c6ff);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  width: 100%;
+  height: 100vh; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif; }
+  .container .list {
+    border: 1px solid white;
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); }
+    .container .list h1 {
+      font-size: 3rem;
+      color: white;
+      background: steelblue;
+      padding: 1rem; }
+      .container .list h1 #add {
+        float: right;
+        cursor: pointer; }
+    .container .list #newTask {
+      display: none;
+      position: relative; }
+      .container .list #newTask input {
+        width: 100%;
+        border: 2px solid aliceblue;
+        font-size: 2rem;
+        padding: 1rem;
+        background: aliceblue; }
+      .container .list #newTask i {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2rem;
+        padding: 1.5rem;
+        cursor: pointer; }
+      .container .list #newTask:focus {
+        border: 2px solid steelblue;
+        background: #fff; }
+    .container .list ul {
+      list-style-type: none; }
+      .container .list ul li {
+        font-size: 1.7rem;
+        line-height: 4rem; }
+        .container .list ul li:nth-child(odd) {
+          background: white; }
+        .container .list ul li:nth-child(even) {
+          background: aliceblue; }
+        .container .list ul li span {
+          display: inline-block;
+          background: #e74c3c;
+          color: white;
+          margin-right: 1rem;
+          width: 0;
+          text-align: center;
+          cursor: pointer;
+          opacity: 0; }
+        .container .list ul li:hover span {
+          width: 9%;
+          opacity: 1;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
+
+.completed {
+  color: gray;
+  text-decoration: line-through; }
+  .completed span {
+    color: white;
+    text-decoration: none; }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+    width: 90%; } }
+
+/*# sourceMappingURL=toDoListStyles.css.map */
