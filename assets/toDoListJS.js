@@ -48,6 +48,11 @@ $(document).ready(function(){
     });
     $("#add").on('click', function(){
         $("#newTask").slideToggle();
+        if($(this).hasClass('fa-plus')) {
+            $(this).removeClass('fa-plus').addClass('fa-minus');
+        } else {
+            $(this).removeClass('fa-minus').addClass('fa-plus');
+        }
     });
 
     containerUL.on('click', 'li', function () {
@@ -93,4 +98,7 @@ $(document).ready(function(){
 
         e.stopPropagation();
     });
+
+    var date = (new Date()).getFullYear();
+    $("#footer").append(date);
 });
